@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+    </head>
+    <body>
+
+<div class="navbar navbar-inverse" role="navigation" >
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand"><h2>Database Management System | Create Thesis<h2></a>
+        </div>
+      </div>
+</div>
+
+<div class = "container">
+    <div class = "col-sm 8"></div>
+        <div class = "col-sm 4">
+            <p style = "padding-left:px font-size:75px" align = "right">Hi! Welcome {{user.nickname()}}   |  <a href="{{ url|safe }}">{{ url_linktext }}</a> | <a href="/">Home</button></a></p><hr>
+        </div>
+</div>
+
+
+<div class = "container">
+
+    <div class = "col-sm-9" style = "padding-top:55px; padding-bottom:30px">
+            <form id="form1">
+                <h2><strong>Thesis Library</strong><h2><hr>
+                <h3><small><strong>Thesis University</small></h3>
+                <input type="text" class="form-control" name="university" placeholder="(e.g. Polytechnic University of the Philippines)"></input>
+                <h3><small><strong>Thesis College</strong></small></h3>
+                <input type="text" class="form-control" name="college" placeholder="(e.g. College of Engineering)"></input>
+                <h3><small><strong>Thesis Department</strong></small></h3>
+                <input type="text" class="form-control" name="department" placeholder="(e.g. Computer Engineering Department)"></input>
+                <h3><small><strong>Thesis title</strong></small></h3>
+                <input type="text" class="form-control" name="thesis_title" placeholder="thesis title"  required></input>
+                <h3><small><strong>Thesis adviser</strong></small></h3>
+                 <input type="text" class="form-control" name="thesis_adviser" placeholder="Firstname Middlename Lastname" required></input>
+                <h3><small><strong>Thesis Proponents</strong></small></h3>
+                <input type="text" class="form-control" name="thesis_member1" placeholder="proponent1" required></input>
+                <input type="text" class="form-control" name="thesis_member2" placeholder="proponent2" ></input>
+                <input type="text" class="form-control" name="thesis_member3" placeholder="proponent3" ></input>
+                <input type="text" class="form-control" name="thesis_member4" placeholder="proponent4" ></input>
+                <input type="text" class="form-control" name="thesis_member5" placeholder="proponent5" ></input>
+                <div class="block">
+                    <h3><small><strong>Year<strong></small></h3>
+                    <select name="thesis_year" class="form-control selection" form="form1" required>
+                        <option selected disabled value="">Year</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <h3><small><strong>Section</strong></small></h3>
+                    <select name="thesis_section" form="form1" class="form-control selection" required>
+                        <option selected disabled value="">Section</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="abs_block" style="padding-bottom:25px">
+                <h3><small><strong>Thesis abstract</strong></small></h3>
+                <textarea name="thesis_abstract" class="form-control" cols="100" rows="20" form="form1" required></textarea></div>
+                <input type="submit" class="btn btn-primary" value="Create">
+                
+            </form>
+        
+        <a href="/"><button class="btn btn-danger">Cancel</button></a>
+</div>
+
+
+<div class = "col-sm-3">
+<hr>
+    <div>
+            <a href="/thesis/list"><button class="btn-danger btn" style = "padding-left:95px;padding-right:95px">Thesis List</button></a><br>
+            <a href="/faculty/list"><button class="btn-danger btn" style = "padding-left:93px;padding-right:93px">Faculty List</button></a><br>
+            <a href="/student/list"><button class="btn-danger btn" style = "padding-left:91px;padding-right:92px" >Student List</button></a><br>
+            <a href="/university/list"><button class="btn-danger btn" style = "padding-left:85px;padding-right:86px">University List</button></a><br>
+            <a href="/college/list"><button class="btn-danger btn" style = "padding-left:92px;padding-right:92px">College List </button></a><br>
+            <a href="#"><button class="btn-red btn" style = "padding-left:86px;padding-right:85px">Create Thesis</button></a><br>
+            <a href="/faculty/create"><button class="btn-danger btn" style = "padding-left:83px;padding-right:83px">Create Faculty</button></a><br>
+            <a href="/student/create"><button class="btn-danger btn" style = "padding-left:82px;padding-right:81px">Create Student</button></a><br>
+            <a href="/university/create"><button class="btn-danger btn" style = "padding-left:75px;padding-right:75px">Create University</button></a><br>
+            <a href="/college/create"><button class="btn-danger btn" style = "padding-left:82px;padding-right:82px">Create College</button></a><br>
+            <a href="/department/create" ><button class="btn-danger btn"style = "padding-left:69px;padding-right:69px">Create Department</button></a><hr>
+    
+    </div>
+</div>
+</div>
+
+
+<div class="navbar navbar-inverse " role="navigation">
+    <div class="container">
+        <div class="navbar-text pull-left">
+            <p>Jess J. Canaway | Karolyn A. Maquilan<br>BS-CpE IV-1</p>     
+        </div>
+    </div>
+</div>
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html>

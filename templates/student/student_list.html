@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+    </head>
+    <body>
+
+<div class="navbar navbar-inverse" role="navigation" >
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand"><h2>Database Management System | Student List<h2></a>
+        </div>
+      </div>
+</div>
+
+<div class = "container">
+    <div class = "col-sm 8"></div>
+        <div class = "col-sm 4">
+            <p style = "padding-left:px font-size:75px" align = "right">Hi! Welcome {{user.nickname()}}   |  <a href="{{ url|safe }}">{{ url_linktext }}</a> | <a href="/">Home</button></a></p><hr>
+        </div>
+</div>
+
+
+<div class = "container">
+
+    <div class = "col-sm-9" style = "padding-top:55px">
+        <input type="search" id="searcher" style = "padding-left:40px; padding-right:35px " placeholder="browse thesis or students">
+        
+        <button class="primary-btn btn" id="search_btn">Search</button> <br><br>
+        
+        <div id='rel_th_container' class='list-inline' >
+            <ul id='searched' style='list-style-type:none'>
+            </ul>
+        </div>
+
+<br><br>
+        <h3><strong>Student List</strong></h3><hr>
+        <h1 class="list_label">Student Number | Name            | Email</h1>
+        <ul class="faculty-list">
+            {% for s in student%}
+                <li>{{s.stud_snum}} |   {{s.stud_lname}} {{s.stud_fname}} {{s.stud_mname}}   |    {{s.stud_email}} | <a href='/student/page/{{s.key.id()}}'>View Details</a></li>
+            {% endfor %}
+        </ul>
+
+</div>
+
+
+<div class = "col-sm-3">
+<hr>
+    <div>
+            <a href="/thesis/list"><button class="btn-danger btn" style = "padding-left:95px;padding-right:95px" active>Thesis List</button></a><br>
+            <a href="/faculty/list"><button class="btn-danger btn" style = "padding-left:93px;padding-right:93px">Faculty List</button></a><br>
+            <a href="#"><button class="btn-red btn" style = "padding-left:91px;padding-right:92px" >Student List</button></a><br>
+            <a href="/university/list"><button class="btn-danger btn" style = "padding-left:85px;padding-right:86px">University List</button></a><br>
+            <a href="/college/list"><button class="btn-danger btn" style = "padding-left:92px;padding-right:92px">College List </button></a><br>
+            <a href="/thesis/create"><button class="btn-danger btn" style = "padding-left:86px;padding-right:85px">Create Thesis</button></a><br>
+            <a href="/faculty/create"><button class="btn-danger btn" style = "padding-left:83px;padding-right:83px">Create Faculty</button></a><br>
+            <a href="/student/create"><button class="btn-danger btn" style = "padding-left:82px;padding-right:81px">Create Student</button></a><br>
+            <a href="/university/create"><button class="btn-danger btn" style = "padding-left:75px;padding-right:75px">Create University</button></a><br>
+            <a href="/college/create"><button class="btn-danger btn" style = "padding-left:82px;padding-right:82px">Create College</button></a><br>
+            <a href="/department/create" ><button class="btn-danger btn"style = "padding-left:69px;padding-right:69px">Create Department</button></a><hr>
+    
+    </div>
+</div>
+</div>
+
+<div class="navbar navbar-inverse " role="navigation">
+    <div class="container">
+        <div class="navbar-text pull-left">
+            <p>Jess J. Canaway | Karolyn A. Maquilan<br>BS-CpE IV-1</p>     
+        </div>
+    </div>
+</div>
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html>

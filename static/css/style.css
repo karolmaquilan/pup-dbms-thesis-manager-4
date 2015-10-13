@@ -1,0 +1,35 @@
+
+#rel_th_container {
+	
+	float: left;
+	height: auto;
+	width: 600px;
+	border: rgb(200,150,150) solid 5px;
+	list-style-type: none;
+	padding-left: 10px;
+}
+
+.btn-red{
+	background-color: #B80000 ;
+	color: white;
+}
+
+p.label {
+	color:#aaa;
+}
+
+input.profile_details {
+	display: block;
+}
+
+.filt {
+	position: relative;
+	margin: 5px 0 5px 5px;
+	width: 30%;
+	height: auto;
+}
+
+.create {
+	width: 40%;
+	margin: 5px 0 5px 5px;
+}

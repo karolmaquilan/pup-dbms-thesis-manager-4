@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+    </head>
+    <body>
+
+<div class="navbar navbar-inverse" role="navigation" >
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand"><h2>Database Management System<h2></a>
+        </div>
+      </div>
+</div>
+   <div class = "container">
+    <div class = "col-sm 8"></div>
+        <div class = "col-sm 4">
+            <p style = "padding-left:px font-size:75px" align = "right">Hi! Welcome {{user.nickname()}}   |  <a href="{{ url|safe }}">{{ url_linktext }}</a> | <a href="/">Home</button></a></p><hr>
+        </div>
+</div>
+
+        <div class="container">
+            <h1><small><strong>Student Profile</strong></small></h1>
+            <form id="form_stud" action="/student/page/{{student.key.id()}}" method="post">
+                <div class="profile_details"><p class="label">First name: </p><input type="text" name="stud_fname" value="{{student.stud_fname}}"></input></div>
+                <div class="profile_details"><p class="label">Middle name: </p><input type="text" name="stud_mname" value="{{student.stud_mname}}"></input></div>
+                <div class="profile_details"><p class="label">Last name: </p><input type="text" name="stud_lname" value="{{student.stud_lname}}"></input></div>
+                <div class="profile_details"><p class="label"> E-mail: </p><input type="text" name="stud_email" value="{{student.stud_email}}"></input></div>
+                <div class="profile_details"><p class="label">Contact number: </p><input type="text" name="stud_pnum" value="{{student.stud_pnum}}"></input></div>
+                <div class="profile_details"><p class="label">Student number: </p><input type="text" name="stud_snum" value="{{student.stud_snum}}"></input></div>
+                <div class="profile_details"><p class="label">Birthday: </p><input type="text" name="stud_bdate" value="{{student.stud_bdate}}"></input></div>
+                <div class="profile_details"><p class="label">Year Graduated: </p><input type="text" name="stud_yrgrad" value="{{student.stud_yrgrad}}"></input></div>
+                <div class="profile_details"><p class="label">Picture: </p><input type="file" name="stud_pic" value="{{student.stud_pic}}"></input></div>
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <a href="/student/delete/{{student.key.id()}}"><button class="btn btn-secondary" style="display:inline">Delete</button></a>
+        </div>
+
+<div class="navbar navbar-inverse " role="navigation">
+    <div class="container">
+        <div class="navbar-text pull-left">
+            <p>Jess J. Canaway | Karolyn A. Maquilan<br>BS-CpE IV-1</p>     
+        </div>
+    </div>
+</div>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html>
